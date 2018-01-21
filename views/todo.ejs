@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js"
+            integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
+            crossorigin="anonymous"></script>
+    <link href="/assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="todo-table">
+        <form method="post" action="/todo">
+            <input type="text" id="item" name="item" placeholder="Add new item..." required />
+            <button type="submit" >Add Item</button>
+        </form>
+        <!-- unordered list -->
+        <ul>
+            <!-- list item -->
+            <li>Dummy Item</li>
+            <li>Dummy Item</li>
+            <li>Dummy Item</li>
+        </ul>
+    </div>
+</body>
+</html>
