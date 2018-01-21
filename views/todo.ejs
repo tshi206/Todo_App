@@ -6,21 +6,23 @@
     <script src="https://code.jquery.com/jquery-3.3.0.min.js"
             integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4="
             crossorigin="anonymous"></script>
-    <link href="/assets/style.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <h1>My Todo List</h1>
     <div id="todo-table">
-        <form method="post" action="/todo">
+        <form>
             <input type="text" id="item" name="item" placeholder="Add new item..." required />
             <button type="submit" >Add Item</button>
         </form>
         <!-- unordered list -->
         <ul>
             <!-- list item -->
-            <li>Dummy Item</li>
-            <li>Dummy Item</li>
-            <li>Dummy Item</li>
+            <% todos.forEach(obj => { %>
+                <li> <%= obj.item; %> </li>
+            <% }); %>
         </ul>
     </div>
+    <script src="/assets/todo-list.js"></script>
 </body>
 </html>
