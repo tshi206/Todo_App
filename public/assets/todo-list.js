@@ -12,6 +12,7 @@ $(document).ready(function(){
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
+          alert("posted: " + JSON.stringify(data));
         }
       });
 
@@ -27,6 +28,7 @@ $(document).ready(function(){
         success: function(data){
           //do something with the data via front-end framework
           location.reload();
+          alert("deleted: " + JSON.stringify(data));
         }
       });
   });

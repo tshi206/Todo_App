@@ -21,6 +21,7 @@
     "@types/body-parser": "^1.16.8",
     "@types/express": "^4.11.0",
     "@types/highland": "^2.10.6",
+    "@types/mongoose": "^4.7.33",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "ejs": "^2.5.7",
@@ -28,6 +29,7 @@
     "highland": "^2.11.1",
     "jquery": "^3.2.1",
     "monet": "^0.8.10",
+    "mongoose": "^5.0.1",
     "popper.js": "^1.12.9"
   }
 }
