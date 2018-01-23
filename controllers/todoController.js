@@ -81,10 +81,21 @@ exports.todoHandler = (app) => {
         })
         */
     });
-    app.delete("/todo/:item", (req, res) => {
+    // updated: check for _id now instead of item
+    app.delete("/todo/:id", (req, res) => {
         // delete the requested item from mongodb
+        /*
+        // old codes used to check the "item": "*text*" directly for deletion
+        // now replaced by checking the data-id attribute instead of text
         console.log(`item to be deleted: ${req.params.item.replace(/-/g, " ").trim()}`);
-        Todo.find({ item: req.params.item.replace(/-/g, " ").trim() })
+        Todo.find({item: req.params.item.replace(/-/g, " ").trim()})
+            .remove((err, data) => {
+                if (err) throw err;
+                res.json(data)
+            });
+        */
+        console.log(`item to be deleted with id: ${req.params.id}`);
+        Todo.find({ _id: req.params.id })
             .remove((err, data) => {
             if (err)
                 throw err;

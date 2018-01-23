@@ -19,7 +19,7 @@
         <ul>
             <!-- list item -->
             <% todos.forEach(obj => { %>
-                <li> <%= obj.item; %> </li>
+                <li data-id="<%= obj._id %>"> <%= obj.item; %> </li>
             <% }); %>
         </ul>
     </div>
