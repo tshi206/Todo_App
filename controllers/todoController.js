@@ -10,6 +10,9 @@ let todoSchema = new mongoose.Schema({
     item: String
 });
 // create a model (a.k.a collection) based on the above schema, and store it as a local TYPE
+// if the collection name has not been explicitly specified as the third parameter, mongoose will generate the collection with a name INDUCED by the model name:
+//      Induced collection name === <model_name> + 's' (all in lowercase)
+//      Hence the induced collection name for model 'Todo' would be 'todos'
 let Todo = mongoose.model("Todo", todoSchema);
 // store an item in the collection (the following can be written as a single line)
 /*
